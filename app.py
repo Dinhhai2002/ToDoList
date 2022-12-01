@@ -28,7 +28,7 @@ def main():
 
 	if choice == "Create":
 		st.subheader("Add Item")
-		col1,col2 = st.beta_columns(2)
+		col1,col2 = st.columns(2)
 		
 		with col1:
 			task = st.text_area("Task To Do")
@@ -78,7 +78,7 @@ def main():
 			task_status = task_result[0][1]
 			task_due_date = task_result[0][2]
 
-			col1,col2 = st.beta_columns(2)
+			col1,col2 = st.columns(2)
 			
 			with col1:
 				new_task = st.text_area("Task To Do",task)
@@ -139,7 +139,7 @@ def main():
 
 		# Row A
 		st.markdown('### Metrics')
-		col1, col2, col3 = st.beta_columns(3)
+		col1, col2, col3 = st.columns(3)
 		col1.metric("Temperature", "70 °F", "1.2 °F")
 		col2.metric("Wind", "9 mph", "-8%")
 		col3.metric("Humidity", "86%", "4%")
@@ -148,7 +148,7 @@ def main():
 		seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 		stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
-		c1, c2 = st.beta_columns((7,3))
+		c1, c2 = st.columns((7,3))
 		with c1:
 			st.markdown('### Heatmap')
 			plost.time_hist(
