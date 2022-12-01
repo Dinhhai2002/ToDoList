@@ -6,12 +6,11 @@ import plost
 
 
 
-# Data Viz Pkgs
 import plotly.express as px 
 
-
+#header trang chủ
 HTML_BANNER = """
-  <div style="display:flex;justify-content: center;background-color:#fc4a1a;padding:10px;border-radius:10px;">
+    <div style="display:flex;justify-content: center;background-color:#fc4a1a;padding:10px;border-radius:10px;">
         <div style="margin:0 20px">
             <img style="width:150px;height:150px;object-fit: contain;" src="https://ucarecdn.com/0416e6a2-8df2-42fb-92c5-c44d3143dea8/" alt="">
         </div>
@@ -28,7 +27,13 @@ HTML_BANNER = """
 
 def main():
 	stc.html(HTML_BANNER)
+	#link file css
+	def local_css(file_name):
+			with open(file_name) as f:
+				st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+
+	local_css("style.css")
 
 	menu = ["Create","Read","Update","Delete","admin","About"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -145,14 +150,14 @@ def main():
 		
 
 
-		# Row A
+		
 		st.markdown('### Metrics')
 		col1, col2, col3 = st.columns(3)
 		col1.metric("Temperature", "70 °F", "1.2 °F")
 		col2.metric("Wind", "9 mph", "-8%")
 		col3.metric("Humidity", "86%", "4%")
 
-		# Row B
+		
 		seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
 		stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
@@ -195,7 +200,7 @@ def main():
 
 		st.markdown(contact_form, unsafe_allow_html=True)
 
-		# Use Local CSS File
+		#link file css
 		def local_css(file_name):
 			with open(file_name) as f:
 				st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
