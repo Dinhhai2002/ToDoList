@@ -11,10 +11,17 @@ import plotly.express as px
 
 
 HTML_BANNER = """
-    <div style="background-color:#464e5f;padding:10px;border-radius:10px">
-    <h1 style="color:white;text-align:center;">ToDo App (CRUD)</h1>
-    <p style="color:white;text-align:center;">Built with Streamlit</p>
-    </div>
+   <div style="display:flex;justify-content: center;background-color:#464e5f;padding:10px;border-radius:10px">
+        <div style="margin:0 20px">
+            <img style="width:150px;height:150px;object-fit: contain;" src="https://ucarecdn.com/0416e6a2-8df2-42fb-92c5-c44d3143dea8/" alt="">
+        </div>
+        <div>
+            <h1 style="color:white;text-align:center;">ToDo App (CRUD)</h1>
+            <p style="color:white;text-align:center;">Project Machine Learning</p>
+        </div>
+       
+
+        </div>
     """
 
 
