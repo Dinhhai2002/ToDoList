@@ -2,7 +2,7 @@
 
 
 /* Card */
-/* Adapted from https://startbootstrap.com/theme/sb-admin-2 */
+
 div.css-1r6slb0.e1tzin5v2 {
 background-color: #FFFFFF;
 border: 1px solid #CCCCCC;
@@ -21,13 +21,12 @@ text-transform: uppercase !important;
 }
 
 
-/* Move block container higher */
+
 div.block-container.css-18e3th9.egzxvld2 {
 margin-top: -5em;
 }
 
 
-/* Hide hamburger menu and footer */
 div.css-r698ls.e8zbici2 {
 display: none;
 }
@@ -73,4 +72,14 @@ input[type=text], input[type=email], textarea {
   button[type=submit]:hover {
     background-color: #45a049;
   }
+.css-1x8cf1d
+{
+  color:#fff;
+  background-color: red;
+
+}/*  edgvbvh10 */
+.css-1om1ktf div {
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-width: 1px;
+}
 
